@@ -1,3 +1,11 @@
 .item-list td {
   vertical-align: middle;
 }
+
+.alert {
+  display: none;
+}
+
+.alert.active {
+  display: block;
+}

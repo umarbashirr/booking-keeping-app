@@ -26,7 +26,15 @@
           <i class="fas fa-book-open"></i>
           Booking Keeping
         </h1>
+        <!-- Alert -->
+        
         <form class="mt-5" id="booking-keeping-form">
+            <div class="alert alert-danger py-2 p-2" role="alert">
+            Please Fill all the details
+          </div>
+          <div class="alert alert-success py-2 p-2" role="alert">
+          Record Added Successfully
+        </div>
             <div class="form-group mb-3">
                 <label for="name" class="form-label">Book Name</label>
                 <input type="text" name="name" id="name" class="form-control">
@@ -37,7 +45,7 @@
             </div>
             <div class="form-group mb-3">
                 <label for="isbn" class="form-label">#ISBN</label>
-                <input type="text" name="isbn" id="isbn" class="form-control">
+                <input type="tel" name="isbn" id="isbn" class="form-control">
             </div>
             <input type="submit" value="Add Now" class="btn btn-primary d-flex">
         </form>
