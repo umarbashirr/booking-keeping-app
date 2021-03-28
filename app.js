@@ -22,6 +22,8 @@ function addBook(e) {
         `
         // Adding New Created List to List Item
         listItem.appendChild(newItem);
+        
+        // Show Success Alert
         successAlert();
     }
     
