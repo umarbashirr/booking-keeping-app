@@ -1,21 +1,15 @@
-// Selecting UI Elements
-const author = document.querySelector('#author').value;
-const bookName = document.querySelector('#name').value;
-const isbn = document.querySelector('#isbn').value;
-const listItem = document.querySelector('.item-list');
-
-// Event Handlers
 document.querySelector('#booking-keeping-form').addEventListener('submit', addBook);
 document.querySelector('.item-list').addEventListener('click', deleteRecord);
 
 function addBook(e) {
+    const author = document.querySelector('#author').value;
+    const bookName = document.querySelector('#name').value;
+    const isbn = document.querySelector('#isbn').value;
+    const listItem = document.querySelector('.item-list');
+
     // Creating New item
     const newItem = document.createElement('tr');
-    
-    //Adding Class to the item 
     newItem.className = 'item';
-
-    // Adding innerHTML to item
     newItem.innerHTML = `
     <td>${listItem.children.length + 1}</td>
     <td>${author}</td>
@@ -33,14 +27,12 @@ function addBook(e) {
     e.preventDefault();    
 }
 
-// Form Reset Function
 function resetForm() {
-    author = '';
-    bookName = '';
-    isbn = '';
+    document.querySelector('#author').value = '';
+    document.querySelector('#name').value = '';
+    document.querySelector('#isbn').value = '';
 }
 
-// Delete Record Function
 function deleteRecord(e) {
     if (e.target.parentElement.classList.contains('delete')) {
         e.target.parentElement.parentElement.parentElement.remove();
